@@ -7,7 +7,8 @@ export class Header extends React.Component {
         this.list_element = React.createRef();
         this.state = {
             items: [
-                { text: 'Home', selected: false},
+                { text: 'Home', selected: true},
+                { text: 'About Me', selected: false},
                 { text: 'Projects', selected: false},
                 { text: 'Education', selected: false},
                 { text: 'Work', selected: false},

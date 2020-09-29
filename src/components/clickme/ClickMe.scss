@@ -1,0 +1,33 @@
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-2vh); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+.ClickMe {
+  animation: bounce 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  .Icon {
+    font-size: 7vh !important;
+  }
+
+  .Text {
+    position: absolute;
+    font-size: 1.7vh;
+    width: 100%;
+    text-align: center;
+  }
+}
