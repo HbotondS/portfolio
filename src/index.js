@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import { Header } from "./components/header/Header";
 
 class App extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div>
