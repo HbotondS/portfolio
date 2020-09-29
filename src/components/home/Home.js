@@ -7,7 +7,7 @@ import { ClickMe } from "../clickme/ClickMe";
 export class Home extends React.Component {
     render() {
         return (
-            <div>
+            <div id={'home'} className={'HomePage'}>
               <div className={'container'}>
                 <div className={'titles'}>
                   <span className={'title'}>Hello I am Botond</span>

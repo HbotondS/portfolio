@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import { scroller } from 'react-scroll'
 
 export class Header extends React.Component {
     constructor(props) {
@@ -7,19 +8,24 @@ export class Header extends React.Component {
         this.list_element = React.createRef();
         this.state = {
             items: [
-                { text: 'Home', selected: true},
-                { text: 'About Me', selected: false},
-                { text: 'Projects', selected: false},
-                { text: 'Education', selected: false},
-                { text: 'Work', selected: false},
+                { text: 'Home', value: 'home', selected: true},
+                { text: 'About Me', value: 'aboutme', selected: false},
+                { text: 'Projects', value: 'projects', selected: false},
+                { text: 'Education', value: 'education', selected: false},
+                { text: 'Work', value: 'work', selected: false},
             ]
         };
     }
 
-    itemSelected(item, index) {
+    scrollTo(value) {
         let items = this.state.items;
+        scroller.scrollTo(value, {
+            duration: 300,
+            smooth: true
+        });
         items.forEach((item, i) => {
-            item.selected = i === index;
+            console.log(item.value === value);
+            item.selected = item.value === value;
         });
         this.setState({items: items});
     }
@@ -29,9 +35,9 @@ export class Header extends React.Component {
             <div id="container">
                 <nav id="navigation-container">
                     <ul id="navigation">
-                        {this.state.items.map((item, index) => (
+                        {this.state.items.map(item => (
                             <li key={item.text}
-                                onClick={() => this.itemSelected(item, index)}
+                                onClick={() => this.scrollTo(item.value)}
                                 className={item.selected ? "selected" : "unselected"}>
                                 {item.text}
                             </li>
