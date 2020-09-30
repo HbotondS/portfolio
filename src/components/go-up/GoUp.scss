@@ -1,0 +1,32 @@
+@keyframes fade-in-animation {
+  0% { transform: translateY(10vh); }
+  60% { transform: translateY(0vh); }
+  90% { transform: translateY(0vh); }
+  100% { transform: translateY(0vh); }
+}
+
+.GoUp {
+  position: fixed;
+  bottom: 5vh;
+  right: 5%;
+  color: white;
+  cursor: pointer;
+  animation: fade-in-animation 1s cubic-bezier(.5,.5,0,1);
+
+  &:hover {
+    bottom: 6vh;
+  }
+
+  .Icon {
+    font-size: 7vh !important;
+  }
+
+  .Text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.7vh;
+    width: 100%;
+    text-align: center;
+  }
+}
