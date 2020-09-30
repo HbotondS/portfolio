@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { scroller } from 'react-scroll'
+import { Events, scroller } from 'react-scroll'
 
 export class Header extends React.Component {
     constructor(props) {
@@ -15,16 +15,52 @@ export class Header extends React.Component {
                 { text: 'Work', value: 'work', selected: false},
             ]
         };
+
+        Events.scrollEvent.register('begin', (to, element) => {
+            this.updateStateWhenScroll(to);
+        })
+        document.addEventListener('scroll', this.trackScrolling);
     }
 
+    isReached(el) {
+        return el.getBoundingClientRect().top <= window.innerHeight / 2;
+    }
+
+    trackScrolling = () => {
+        const homeComp = document.getElementById('home');
+        const aboutMeComp = document.getElementById('aboutme');
+        const projectsComp = document.getElementById('projects');
+        const educationComp = document.getElementById('education');
+        const workComp = document.getElementById('work');
+        if (this.isReached(homeComp)) {
+            this.updateStateWhenScroll('home');
+        }
+        if (this.isReached(aboutMeComp)) {
+            this.updateStateWhenScroll('aboutme');
+        }
+        if (this.isReached(projectsComp)) {
+            this.updateStateWhenScroll('projects');
+        }
+        if (this.isReached(educationComp)) {
+            this.updateStateWhenScroll('education');
+        }
+        if (this.isReached(workComp)) {
+            this.updateStateWhenScroll('work');
+        }
+    };
+
+
     scrollTo(value) {
-        let items = this.state.items;
         scroller.scrollTo(value, {
             duration: 300,
             smooth: true
         });
+        this.updateStateWhenScroll(value);
+    }
+
+    updateStateWhenScroll(value) {
+        let items = this.state.items;
         items.forEach((item, i) => {
-            console.log(item.value === value);
             item.selected = item.value === value;
         });
         this.setState({items: items});
@@ -46,5 +82,10 @@ export class Header extends React.Component {
                 </nav>
             </div>
         );
+    }
+
+    componentWillUnmount() {
+        Events.scrollEvent.remove('begin');
+        document.removeEventListener('scroll', this.trackScrolling);
     }
 }
