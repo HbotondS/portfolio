@@ -12,7 +12,7 @@ export class Home extends React.Component {
                 <div className={'titles'}>
                   <span className={'title'}>Hello I am Botond</span>
                   <span className={'subtitle'}>Full Stack Dev | Hobby Game Dev | Gamer</span>
-                  </div>
+
                   <div className={'links'}>
                     <a href="https://github.com/HbotondS" target={"_blank"}>
                       <GitHubIcon className={'githubicon'}/>
@@ -21,6 +21,7 @@ export class Home extends React.Component {
                       <LinkedInIcon className={'linkedinicon'}/>
                     </a>
                   </div>
+                </div>
               </div>
               <ClickMe/>
             </div>
