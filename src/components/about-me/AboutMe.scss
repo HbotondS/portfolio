@@ -1,4 +1,65 @@
 .AboutMePage {
   height: 100vh;
   background: #161515;
+
+  .container {
+    width: 55vw;
+    position: relative;
+    right: 3%;
+    top: 30%;
+    z-index: 1;
+
+    .title {
+      color: white;
+      font-weight: bold;
+      position: relative;
+      font-size: 5vh;
+      left: 79%;
+    }
+
+    .text {
+      color: white;
+      font-size: 2vh;
+      position: relative;
+      text-align: justify;
+      margin: 0;
+      top: 3vh;
+    }
+
+    .button {
+      width: 30vh;
+      height: 4vh;
+      position: relative;
+      top: 5vh;
+      border: white .3vh solid;
+      border-radius: 1vh;
+      cursor: pointer;
+
+      &:active {
+        transform: translate(-1%, 1%);
+      }
+
+      .button-text {
+        font-size: 2vh;
+        font-weight: bold;
+        position: absolute;
+        top: 22%;
+        left: 5%
+      }
+
+      .download-icon {
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        font-size: 3vh;
+      }
+    }
+  }
+
+  .man-svg {
+    width: 100vh;
+    height: 70vh;
+    position: relative;
+    left: -10%;
+  }
 }
