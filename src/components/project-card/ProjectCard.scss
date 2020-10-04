@@ -1,0 +1,48 @@
+.ProjectCard {
+  margin-right: 3vh;
+  margin-bottom: 10vh;
+
+  .image-background {
+    height: 13vh;
+    width: 25vh;
+    margin-bottom: 1vh;
+    background: #772CE8;
+
+    .image {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .image {
+        transform: translate(.5vh, -.5vh);
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 1vh;
+    font-weight: bold;
+    font-size: 2vh;
+  }
+
+  .badges {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .badge {
+      font-size: 1.5vh;
+      margin-right: .5vh;
+      background: #6B6B6B;
+      border-radius: 99vh;
+      border: 0 solid red;
+      width: fit-content;
+
+      .badge-text {
+        margin: 1vh;
+      }
+    }
+  }
+}
