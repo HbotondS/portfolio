@@ -10,6 +10,13 @@
     position: relative;
     left: 8vh;
     top: 30%;
-    z-index: 1;
+  }
+
+  .presenting-svg {
+    position: relative;
+    right: -65%;
+    top: -55vh;
+    height: 95vh;
+    width: 80vh;
   }
 }

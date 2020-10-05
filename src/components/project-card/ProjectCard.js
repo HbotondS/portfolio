@@ -11,7 +11,9 @@ export class ProjectCard extends React.Component {
         return (
             <div className={'ProjectCard'}>
               <div className={'image-background'}>
-                  <img className={'image'} src={this.project.image} />
+                  <img className={'image'}
+                       src={this.project.image}
+                       alt={this.project.title} />
               </div>
               <div>
                 <span className={'title'}>{this.project.title}</span>
