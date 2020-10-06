@@ -1,4 +1,19 @@
 .ExperiencePage {
   height: 100vh;
   background: #161515;
+
+  .reading-svg {
+    position: relative;
+    top: 30%;
+    height: 60vh;
+    width: 60vh;
+  }
+
+  .work-svg {
+    position: relative;
+    top: 40%;
+    left: 30%;
+    height: 60vh;
+    width: 60vh;
+  }
 }
