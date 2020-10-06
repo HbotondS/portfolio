@@ -2,6 +2,7 @@ import * as React from 'react';
 import './Home.scss';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailIcon from '@material-ui/icons/Mail';
 import { ClickMe } from "../clickme/ClickMe";
 
 export class Home extends React.Component {
@@ -16,6 +17,9 @@ export class Home extends React.Component {
                   <div className={'links'}>
                     <a href="https://github.com/HbotondS" target={"_blank"}>
                       <GitHubIcon className={'githubicon'}/>
+                    </a>
+                    <a href={"mailto:hbotond97@gmail.com"}>
+                      <MailIcon className={'mailicon'}/>
                     </a>
                     <a href="https://www.linkedin.com/in/hbotond/" target="_blank">
                       <LinkedInIcon className={'linkedinicon'}/>
