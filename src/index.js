@@ -5,8 +5,7 @@ import { Header } from "./components/header/Header";
 import { Home } from "./components/home/Home";
 import { AboutMe } from "./components/about-me/AboutMe";
 import { Projects } from "./components/projects/Projects";
-import { Education } from "./components/education/Education";
-import { Work } from "./components/work/Work";
+import { Experience } from "./components/experience/Experience";
 import { GoUp } from "./components/go-up/GoUp";
 
 class App extends React.Component {
@@ -36,8 +35,7 @@ class App extends React.Component {
         <Home/>
         <AboutMe/>
         <Projects/>
-        <Education/>
-        <Work/>
+        <Experience/>
         <div>
             {shouldShow && <GoUp/>}
         </div>

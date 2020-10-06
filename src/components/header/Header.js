@@ -11,8 +11,7 @@ export class Header extends React.Component {
                 { text: 'Home', value: 'home', selected: true},
                 { text: 'About Me', value: 'aboutme', selected: false},
                 { text: 'Projects', value: 'projects', selected: false},
-                { text: 'Education', value: 'education', selected: false},
-                { text: 'Work', value: 'work', selected: false},
+                { text: 'Experience', value: 'experience', selected: false},
             ]
         };
 
@@ -30,8 +29,7 @@ export class Header extends React.Component {
         const homeComp = document.getElementById('home');
         const aboutMeComp = document.getElementById('aboutme');
         const projectsComp = document.getElementById('projects');
-        const educationComp = document.getElementById('education');
-        const workComp = document.getElementById('work');
+        const educationComp = document.getElementById('experience');
         if (this.isReached(homeComp)) {
             this.updateStateWhenScroll('home');
         }
@@ -42,10 +40,7 @@ export class Header extends React.Component {
             this.updateStateWhenScroll('projects');
         }
         if (this.isReached(educationComp)) {
-            this.updateStateWhenScroll('education');
-        }
-        if (this.isReached(workComp)) {
-            this.updateStateWhenScroll('work');
+            this.updateStateWhenScroll('experience');
         }
     };
 
