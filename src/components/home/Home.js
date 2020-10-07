@@ -15,13 +15,17 @@ export class Home extends React.Component {
                   <span className={'subtitle'}>Full Stack Dev | Hobby Game Dev | Gamer</span>
 
                   <div className={'links'}>
-                    <a href="https://github.com/HbotondS" target={"_blank"}>
+                    <a href="https://github.com/HbotondS"
+                       target={"_blank"}
+                       rel={'noopener noreferrer'}>
                       <GitHubIcon className={'githubicon'}/>
                     </a>
                     <a href={"mailto:hbotond97@gmail.com"}>
                       <MailIcon className={'mailicon'}/>
                     </a>
-                    <a href="https://www.linkedin.com/in/hbotond/" target="_blank">
+                    <a href="https://www.linkedin.com/in/hbotond/"
+                       target="_blank"
+                       rel={'noopener noreferrer'}>
                       <LinkedInIcon className={'linkedinicon'}/>
                     </a>
                   </div>

@@ -16,4 +16,26 @@
     height: 60vh;
     width: 60vh;
   }
+
+  .experience-container {
+    position: absolute;
+    top: 315vh;
+    left: 25vw;
+    width: 50vw;
+    height: 80vh;
+    color: white;
+
+    .title {
+      position: absolute;
+      font-size: 2.5vh;
+
+      &.left {
+        left: 15%;
+      }
+
+      &.right {
+        right: 15%;
+      }
+    }
+  }
 }

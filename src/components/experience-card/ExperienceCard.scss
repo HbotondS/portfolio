@@ -1,0 +1,60 @@
+.ExperienceCard {
+  width: 20vw;
+  height: 12vh;
+  background: #333333;
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+  .experience-title {
+    position: relative;
+    top: 16%;
+    left: 5%;
+    font-size: 2vh;
+  }
+
+  .experience-link {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: #4E44DC;
+    text-decoration: none;
+  }
+
+  .experience-date {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 1.5vh;
+  }
+
+  .experience-location {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font-size: 1.5vh;
+    opacity: 75%;
+  }
+
+  .circle {
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    top: 37%;
+    border-radius: 50%;
+    border: #772CE8 .3vh solid;
+
+    &.work {
+      left: -15%;
+    }
+
+    &.education {
+      right: -15%;
+    }
+
+    &.current {
+      background: #772CE8;
+    }
+  }
+}

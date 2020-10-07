@@ -5,8 +5,8 @@ export class ProjectCard extends React.Component {
     constructor(props) {
         super(props);
         this.project = props.project;
-        console.log(this.project)
     }
+
     render() {
         return (
             <div className={'ProjectCard'}>
