@@ -2,19 +2,43 @@
   width: 20vw;
   height: 12vh;
   background: #333333;
-  border-radius: 20px;
+  border-radius: 2vh;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+
+  &.work {
+    right: 8.8%;
+
+    .line {
+      left: -10.5%;
+    }
+  }
+
+  &.education {
+    left: 3%;
+
+    .line {
+      right: -11%;
+    }
+  }
+
+  .line {
+    position: absolute;
+    top: -51%;
+    border-left: 0.4vh solid #772CE8;
+    height: 10vh;
+  }
 
   .experience-title {
-    position: relative;
-    top: 16%;
+    position: absolute;
+    top: 0;
     left: 5%;
     font-size: 2vh;
   }
 
   .experience-link {
     position: absolute;
-    top: 35%;
+    top: 37%;
     left: 5%;
     font-size: 1.5vh;
     font-weight: bold;
@@ -24,14 +48,14 @@
 
   .experience-date {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 5%;
     font-size: 1.5vh;
   }
 
   .experience-location {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 5%;
     font-size: 1.5vh;
     opacity: 75%;

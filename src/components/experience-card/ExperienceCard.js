@@ -8,8 +8,13 @@ export class ExperienceCard extends React.Component {
     }
 
     render() {
+        let line;
+        if (this.experience.type !== 'current') {
+            line = <div className={'line'}></div>;
+        }
         return (
-          <div className={'ExperienceCard'}>
+          <div className={'ExperienceCard ' +
+                           this.experience.status}>
             <h3 className={'experience-title'}>{this.experience.title}</h3>
             <a target={'_blank'}
                rel={'noopener noreferrer'}
@@ -23,6 +28,7 @@ export class ExperienceCard extends React.Component {
                             ' circle ' +
                             this.experience.type}>
             </div>
+            {line}
           </div>
         );
     }
