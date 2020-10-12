@@ -7,12 +7,12 @@
     width: 25vh;
     margin-bottom: 1vh;
     background: #772CE8;
-    cursor: pointer;
 
     .image {
       height: 100%;
       width: 100%;
       transition: 0.2s;
+      image-rendering: pixelated;
     }
 
     &:hover {

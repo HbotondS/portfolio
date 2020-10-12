@@ -3,67 +3,68 @@ import * as React from "react";
 import { ReactComponent as ReadingSvg} from '../../assets/reading.svg';
 import { ReactComponent as WorkSvg} from '../../assets/work.svg';
 import { ExperienceCard } from "../experience-card/ExperienceCard";
+import {ExperienceData} from "../../models/experience-data";
 
 export class Experience extends React.Component {
     constructor(props) {
         super(props);
 
         this.experiences = [
-            {
-                title: 'Computer Science',
-                link: {
+            new ExperienceData(
+                'Computer Science',
+                {
                     url: 'https://ms.sapientia.ro/en',
                     displayName: 'Sapientia Hungarian Univeristy of Transilvania'
                 },
-                date: '2016-2018',
-                location: 'Targu Mures, Romania',
-                status: 'education',
-                type: '',
-            },
-            {
-                title: 'Information Science, Erasmus+',
-                link: {
+                '2016-2018',
+                'Targu Mures, Romania',
+                'education',
+                '',
+                ),
+            new ExperienceData(
+                'Information Science, Erasmus+',
+                {
                     url: 'https://inf.unideb.hu/en',
                     displayName: 'University of Debrecen, Faculty of Informatics'
                 },
-                date: '2018 feb - 2018 jun',
-                location: 'Debrecen, Hungary',
-                status: 'education',
-                type: '',
-            },
-            {
-                title: 'Software developer intern',
-                link: {
+                '2018 feb - 2018 jun',
+                'Debrecen, Hungary',
+                'education',
+                '',
+            ),
+            new ExperienceData(
+                'Software developer intern',
+                {
                     url: 'https://www.msg-systems.ro/',
                     displayName: 'MSG Systems'
                 },
-                date: '2018 jul - 2018 aug',
-                location: 'Targu Mures, Romania',
-                status: 'work',
-                type: '',
-            },
-            {
-                title: 'Information Science, Bsc degree',
-                link: {
+                '2018 jul - 2018 aug',
+                'Targu Mures, Romania',
+                'work',
+                '',
+            ),
+            new ExperienceData(
+                'Information Science, Bsc degree',
+                {
                     url: 'https://ms.sapientia.ro/en',
                     displayName: 'Sapientia Hungarian Univeristy of Transilvania'
                 },
-                date: '2018-2020',
-                location: 'Targu Mures, Romania',
-                status: 'education',
-                type: '',
-            },
-            {
-                title: 'Full Stack developer',
-                link: {
+                '2018-2020',
+                'Targu Mures, Romania',
+                'education',
+                '',
+            ),
+            new ExperienceData(
+                'Full Stack developer',
+                {
                     url: 'https://www.msg-systems.ro/',
                     displayName: 'MSG Systems'
                 },
-                date: '2018 nov - Present',
-                location: 'Targu Mures, Romania',
-                status: 'work',
-                type: 'current',
-            },
+                '2018 nov - Present',
+                'Targu Mures, Romania',
+                'work',
+                'current',
+            ),
         ];
     }
 

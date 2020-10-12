@@ -11,9 +11,13 @@ export class ProjectCard extends React.Component {
         return (
             <div className={'ProjectCard'}>
               <div className={'image-background'}>
+                <a href={this.project.link}
+                   target={"_blank"}
+                   rel={'noopener noreferrer'}>
                   <img className={'image'}
                        src={this.project.image}
                        alt={this.project.title} />
+                </a>
               </div>
               <div>
                 <span className={'title'}>{this.project.title}</span>
