@@ -1,7 +1,7 @@
 import './Experience.scss'
 import * as React from "react";
-import { ReactComponent as ReadingSvg} from '../../assets/reading.svg';
-import { ReactComponent as WorkSvg} from '../../assets/work.svg';
+import { ReactComponent as ReadingSvg} from '../../assets/animations/reading.svg';
+import { ReactComponent as WorkSvg} from '../../assets/animations/work.svg';
 import { ExperienceCard } from "../experience-card/ExperienceCard";
 import {ExperienceData} from "../../models/experience-data";
 

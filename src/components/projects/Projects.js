@@ -2,9 +2,9 @@ import './Projects.scss'
 import * as React from "react";
 import { ProjectData } from "../../models/project-data";
 import {ProjectCard} from "../project-card/ProjectCard";
-import space_invaders from "../../images/space_invaders.jpg";
-import snake from "../../images/snake.jpg";
-import { ReactComponent as ManPresenting } from "../../assets/projects.svg";
+import space_invaders from "../../assets/images/space_invaders.jpg";
+import snake from "../../assets/images/snake.jpg";
+import { ReactComponent as ManPresenting } from "../../assets/animations/projects.svg";
 
 export class Projects extends React.Component {
     constructor(props) {

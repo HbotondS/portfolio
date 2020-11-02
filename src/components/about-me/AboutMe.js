@@ -1,7 +1,8 @@
 import './AboutMe.scss'
 import * as React from "react";
 import GetAppIcon from '@material-ui/icons/GetApp';
-import { ReactComponent as ManSvg} from '../../assets/thinking_man.svg';
+import { ReactComponent as ManSvg } from '../../assets/animations/thinking_man.svg';
+import cv from '../../assets/docs/Botond Hegyi CV.pdf';
 
 export class AboutMe extends React.Component {
     render() {
@@ -15,8 +16,10 @@ export class AboutMe extends React.Component {
                     I acquired project and time management skills, as well as the ability to communicate with team members and clients while effectively meeting milestones and deadlines.
                 </p>
                 <div className={'button'}>
-                  <span className={'button-text'}>DOWNLOAD RESUME</span>
-                  <GetAppIcon className={'download-icon'}/>
+                  <a href={cv} download={'Botond_Hegyi_CV.pdf'}>
+                    <span className={'button-text'}>DOWNLOAD RESUME</span>
+                    <GetAppIcon className={'download-icon'}/>
+                  </a>
                 </div>
               </div>
               <ManSvg className={'man-svg'}/>
