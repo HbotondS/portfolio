@@ -10,7 +10,9 @@ export class AboutMe extends React.Component {
               <div className={'container'}>
                 <span className={'title'}>About Me</span>
 
-                <p className={'text'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p className={'text'}>During university I started working in part time for MSG Systems Romania in Tirgu Mures.
+                    After graduating in 2020 with a Bachelor’s Degree in Information Science, I started working in full-time as part of a team.
+                    I acquired project and time management skills, as well as the ability to communicate with team members and clients while effectively meeting milestones and deadlines.
                 </p>
                 <div className={'button'}>
                   <span className={'button-text'}>DOWNLOAD RESUME</span>
