@@ -2,8 +2,10 @@ body {
   background: #121212;
   margin: 0;
   font-family: "Roboto Light", sans-serif;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  background: transparent;
+  width: 0;
 }
