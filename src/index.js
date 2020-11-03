@@ -7,6 +7,7 @@ import { AboutMe } from "./components/about-me/AboutMe";
 import { Projects } from "./components/projects/Projects";
 import { Experience } from "./components/experience/Experience";
 import { GoUp } from "./components/go-up/GoUp";
+import { Footer } from "./components/footer/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class App extends React.Component {
         <AboutMe/>
         <Projects/>
         <Experience/>
+        <Footer/>
         <div>
             {shouldShow && <GoUp/>}
         </div>
