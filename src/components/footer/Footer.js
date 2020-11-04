@@ -7,7 +7,10 @@ export class Footer extends React.Component {
         return (
             <div id="footer">
               <span className={'footerTxt'}>
-                Currently <a className={'versionNr'} href={''}>v0.1</a>.
+                Currently <a className={'versionNr'}
+                             href={'https://github.com/HbotondS/portfolio/releases/tag/v0.1'}
+                             target={"_blank"}
+                             rel={'noopener noreferrer'}>v0.1</a>.
                 Built with <FavoriteIcon className={'icon'}/> Copyright © 2020 Botond Hegyi
               </span>
             </div>
