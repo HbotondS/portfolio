@@ -1,7 +1,7 @@
 .ExperienceCard {
   width: 20vw;
   height: 12vh;
-  background: #333333;
+  background: var(--card-bg);
   border-radius: 2vh;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
   position: absolute;
@@ -25,7 +25,7 @@
   .line {
     position: absolute;
     top: -51%;
-    border-left: 0.4vh solid #772CE8;
+    border-left: var(--primary) 0.4vh solid;
     height: 10vh;
   }
 
@@ -34,6 +34,7 @@
     top: 0;
     left: 5%;
     font-size: 2vh;
+    color: var(--experience-title);
   }
 
   .experience-link {
@@ -42,7 +43,7 @@
     left: 5%;
     font-size: 1.5vh;
     font-weight: bold;
-    color: #4E44DC;
+    color: var(--experience-link);
     text-decoration: none;
   }
 
@@ -51,6 +52,7 @@
     top: 55%;
     left: 5%;
     font-size: 1.5vh;
+    color: var(--experience-date);
   }
 
   .experience-location {
@@ -58,7 +60,7 @@
     top: 70%;
     left: 5%;
     font-size: 1.5vh;
-    opacity: 75%;
+    color: var(--experience-location);
   }
 
   .circle {
@@ -67,7 +69,7 @@
     position: absolute;
     top: 37%;
     border-radius: 50%;
-    border: #772CE8 .3vh solid;
+    border: var(--primary) .3vh solid;
 
     &.work {
       left: -15%;
@@ -78,7 +80,7 @@
     }
 
     &.current {
-      background: #772CE8;
+      background: var(--primary);
     }
   }
 }

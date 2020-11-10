@@ -1,5 +1,7 @@
+@import 'theme/main';
+
 body {
-  background: #121212;
+  background: var(--bg);
   margin: 0;
   font-family: "Roboto Light", sans-serif;
   overflow-x: hidden;

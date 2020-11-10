@@ -1,7 +1,6 @@
 .ProjectsPage {
   height: 100vh;
-  background: #121212;
-  color: white;
+  background: var(--bg);
 
   .project-container {
     display: flex;

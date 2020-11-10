@@ -6,7 +6,7 @@
     height: 13vh;
     width: 25vh;
     margin-bottom: 1vh;
-    background: #772CE8;
+    background: var(--primary);
 
     .image {
       height: 100%;
@@ -26,6 +26,7 @@
     margin-bottom: 1vh;
     font-weight: bold;
     font-size: 2vh;
+    color: var(--title);
   }
 
   .badges {
@@ -36,13 +37,13 @@
     .badge {
       font-size: 1.5vh;
       margin-right: .5vh;
-      background: #6B6B6B;
+      background: var(--badge-bg);
       border-radius: 99vh;
-      border: 0 solid red;
       width: fit-content;
 
       .badge-text {
         margin: 1vh;
+        color: var(--badge-text);
       }
     }
   }
