@@ -20,7 +20,7 @@ export class ProjectCard extends React.Component {
                 </a>
               </div>
               <div>
-                <span className={'title'}>{this.project.title}</span>
+                <span className={'project-title'}>{this.project.title}</span>
               </div>
               <div className={'badges'}>
                 {this.project.badges.map((badge, index) => (
