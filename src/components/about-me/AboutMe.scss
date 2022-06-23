@@ -1,6 +1,5 @@
 .AboutMePage {
   height: 100vh;
-  background: #161515;
 
   .container {
     width: 55vw;
@@ -10,7 +9,6 @@
     z-index: 1;
 
     .title {
-      color: white;
       font-weight: bold;
       position: relative;
       font-size: 5vh;
@@ -18,7 +16,6 @@
     }
 
     .text {
-      color: white;
       font-size: 2vh;
       position: relative;
       text-align: justify;
@@ -31,7 +28,8 @@
       height: 4vh;
       position: relative;
       top: 5vh;
-      border: white .3vh solid;
+      border-width: .3vh;
+      border-style: solid;
       border-radius: 1vh;
       cursor: pointer;
 
@@ -45,7 +43,6 @@
         position: absolute;
         top: 22%;
         left: 5%;
-        color: white;
       }
 
       .download-icon {
@@ -53,7 +50,6 @@
         right: 5%;
         top: 15%;
         font-size: 3vh;
-        color: white;
       }
     }
   }

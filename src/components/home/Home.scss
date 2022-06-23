@@ -3,7 +3,6 @@
 }
 
 .container {
-  color: white;
   position: absolute;
   top: 40%;
   right: 50%;
@@ -11,18 +10,17 @@
 
   .titles {
     text-align: center;
-    font-size: 5vh;
     display: grid;
-  }
 
-  .title {
+    .title {
+      font-size: 5vh;
+    }
 
-  }
-
-  .subtitle {
-    font-size: 3vh !important;
-    padding-top: 2vh;
-    padding-bottom: 1vh;
+    .subtitle {
+      font-size: 3vh !important;
+      padding-top: 2vh;
+      padding-bottom: 1vh;
+    }
   }
 
   .links {
@@ -33,18 +31,15 @@
       font-size: 5.5vh;
       padding-top: 0.8vh;
       margin-right: 3vh;
-      color: white;
     }
 
     .mailicon {
       font-size: 7vh;
       margin-right: 3vh;
-      color: white;
     }
 
     .linkedinicon {
       font-size: 7vh !important;
-      color: white;
     }
   }
 }
