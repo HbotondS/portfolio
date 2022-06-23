@@ -1,6 +1,6 @@
 import './AboutMe.scss'
 import * as React from "react";
-import GetAppIcon from '@material-ui/icons/GetApp';
+import DownloadIcon from '@mui/icons-material/Download';
 import { ReactComponent as ManSvg } from '../../assets/animations/thinking_man.svg';
 import cv from '../../assets/docs/Botond Hegyi CV.pdf';
 
@@ -18,7 +18,7 @@ export class AboutMe extends React.Component {
                 <div className={'button'}>
                   <a href={cv} download={'Botond_Hegyi_CV.pdf'}>
                     <span className={'button-text'}>DOWNLOAD RESUME</span>
-                    <GetAppIcon className={'download-icon'}/>
+                    <DownloadIcon className={'download-icon'}/>
                   </a>
                 </div>
               </div>

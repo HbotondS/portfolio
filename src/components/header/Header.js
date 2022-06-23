@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.scss';
-import { Events, scroller } from 'react-scroll'
+import { Events, scroller } from 'react-scroll';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export class Header extends React.Component {
     constructor(props) {
@@ -62,6 +64,13 @@ export class Header extends React.Component {
     }
 
     render() {
+        let themeSwitcher;
+        if (this.props.theme === 'light') {
+            themeSwitcher = <DarkModeIcon className={'themeicon'} onClick={this.props.switchTheme}/>;
+        } else {
+            themeSwitcher = <LightModeIcon className={'themeicon'} onClick={this.props.switchTheme}/>;
+        }
+
         return (
             <div id="container">
                 <nav id="navigation-container">
@@ -75,6 +84,7 @@ export class Header extends React.Component {
                         ))}
                     </ul>
                 </nav>
+                {themeSwitcher}
             </div>
         );
     }

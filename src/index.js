@@ -34,7 +34,7 @@ class App extends React.Component {
     }
 
     render() {
-        const themeToggler = () => {
+        const switchTheme = () => {
             this.state.theme === 'light' ? this.setState({theme: 'dark'}) : this.setState({theme: 'light'});
         }
 
@@ -43,7 +43,7 @@ class App extends React.Component {
             <ThemeProvider theme={ this.state.theme === 'light' ? lightTheme : darkTheme}>
                 <GlobalStyles />
                 <StyledApp>
-                    <Header/>
+                    <Header theme={this.state.theme} switchTheme={switchTheme}/>
                     <Home/>
                     <AboutMe/>
                     <Projects/>
