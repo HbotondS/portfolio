@@ -1,10 +1,8 @@
 .HomePage {
   height: 100vh;
-  background: var(--bg);
 }
 
 .container {
-  color: var(--title);
   position: absolute;
   top: 40%;
   right: 50%;
@@ -33,18 +31,15 @@
       font-size: 5.5vh;
       padding-top: 0.8vh;
       margin-right: 3vh;
-      color: var(--title);
     }
 
     .mailicon {
       font-size: 7vh;
       margin-right: 3vh;
-      color: var(--title);
     }
 
     .linkedinicon {
       font-size: 7vh !important;
-      color: var(--title);
     }
   }
 }

@@ -1,6 +1,5 @@
 .ExperiencePage {
   height: 100vh;
-  background: var(--bg-light);
 
   .reading-svg {
     position: relative;
@@ -30,7 +29,6 @@
       .title {
         position: absolute;
         font-size: 2.5vh;
-        color: var(--title);
 
         &.left {
           left: 15%;

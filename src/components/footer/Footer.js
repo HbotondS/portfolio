@@ -5,7 +5,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 export class Footer extends React.Component {
     render() {
         return (
-            <div id="footer">
+            <div id="footer" className={'Footer'}>
               <span className={'footerTxt'}>
                 Currently <a className={'versionNr'}
                              href={'https://github.com/HbotondS/portfolio/releases/tag/v0.1'}

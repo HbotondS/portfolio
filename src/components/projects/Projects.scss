@@ -1,6 +1,5 @@
 .ProjectsPage {
   height: 100vh;
-  background: var(--bg);
 
   .project-container {
     display: flex;
@@ -20,7 +19,6 @@
   }
 
   .title {
-    color: white;
     font-weight: bold;
     position: relative;
     font-size: 5vh;
