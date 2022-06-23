@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.17f26f77.css",
-    "main.js": "/portfolio/static/js/main.d282f9d8.js",
+    "main.css": "/portfolio/static/css/main.168fa43b.css",
+    "main.js": "/portfolio/static/js/main.8e114f54.js",
     "static/media/space_invaders.jpg": "/portfolio/static/media/space_invaders.46a98411ebc036602921.jpg",
     "static/media/minesweeper.jpg": "/portfolio/static/media/minesweeper.377e753fa56b30575c56.jpg",
     "static/media/Botond Hegyi CV.pdf": "/portfolio/static/media/Botond Hegyi CV.f72e0feb40bce43570b2.pdf",
@@ -12,11 +12,11 @@
     "static/media/projects.svg": "/portfolio/static/media/projects.bc17fc2df9b506a34e18f9652b2cda4c.svg",
     "static/media/thinking_man.svg": "/portfolio/static/media/thinking_man.a6a9f73a9f6f7784213a05afdc777033.svg",
     "index.html": "/portfolio/index.html",
-    "main.17f26f77.css.map": "/portfolio/static/css/main.17f26f77.css.map",
-    "main.d282f9d8.js.map": "/portfolio/static/js/main.d282f9d8.js.map"
+    "main.168fa43b.css.map": "/portfolio/static/css/main.168fa43b.css.map",
+    "main.8e114f54.js.map": "/portfolio/static/js/main.8e114f54.js.map"
   },
   "entrypoints": [
-    "static/css/main.17f26f77.css",
-    "static/js/main.d282f9d8.js"
+    "static/css/main.168fa43b.css",
+    "static/js/main.8e114f54.js"
   ]
 }
