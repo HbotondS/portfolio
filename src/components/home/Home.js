@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './Home.scss';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import MailIcon from '@material-ui/icons/Mail';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 import { ClickMe } from "../clickme/ClickMe";
 
 export class Home extends React.Component {
@@ -21,7 +21,7 @@ export class Home extends React.Component {
                       <GitHubIcon className={'githubicon'}/>
                     </a>
                     <a href={"mailto:hbotond97@gmail.com"}>
-                      <MailIcon className={'mailicon'}/>
+                      <EmailIcon className={'emailicon'}/>
                     </a>
                     <a href="https://www.linkedin.com/in/hbotond/"
                        target="_blank"

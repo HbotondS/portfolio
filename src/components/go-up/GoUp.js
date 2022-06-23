@@ -1,6 +1,6 @@
 import React from 'react';
 import './GoUp.scss'
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { scroller } from "react-scroll";
 
 export class GoUp extends React.Component {

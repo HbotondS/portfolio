@@ -71,7 +71,7 @@ export const GlobalStyles = createGlobalStyle`
        }
        
        .links {
-          .githubicon, .mailicon, .linkedinicon {
+          .githubicon, .emailicon, .linkedinicon {
              color: ${(props => props.theme.title)};
           }
        }

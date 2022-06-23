@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export class Footer extends React.Component {
     render() {
@@ -10,8 +10,8 @@ export class Footer extends React.Component {
                 Currently <a className={'versionNr'}
                              href={'https://github.com/HbotondS/portfolio/releases/tag/v0.1'}
                              target={"_blank"}
-                             rel={'noopener noreferrer'}>v0.1</a>.
-                Built with <FavoriteIcon className={'icon'}/> Copyright © 2020 Botond Hegyi
+                             rel={'noopener noreferrer'}>v0.2</a>.
+                Built with <FavoriteIcon className={'icon'}/> Copyright © 2022 Botond Hegyi
               </span>
             </div>
         );

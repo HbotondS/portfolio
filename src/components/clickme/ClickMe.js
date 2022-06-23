@@ -1,6 +1,6 @@
 import React from 'react';
 import './ClickMe.scss'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { scroller } from "react-scroll";
 
 export class ClickMe extends React.Component {
