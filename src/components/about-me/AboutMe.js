@@ -7,7 +7,7 @@ import cv from '../../assets/docs/Botond Hegyi CV.pdf';
 export class AboutMe extends React.Component {
     render() {
         return (
-            <div id={'aboutme'} className={'AboutMePage'}>
+            <div id={'aboutme'} className={'AboutMePage'} ref={this.props.reference}>
               <div className={'container'}>
                 <span className={'title'}>About Me</span>
 

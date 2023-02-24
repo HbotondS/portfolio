@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { Events, scroller } from 'react-scroll';
+import { Events } from 'react-scroll';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -10,57 +10,23 @@ export class Header extends React.Component {
         this.list_element = React.createRef();
         this.state = {
             items: [
-                { text: 'Home', value: 'home', selected: true},
-                { text: 'About Me', value: 'aboutme', selected: false},
-                { text: 'Projects', value: 'projects', selected: false},
-                { text: 'Experience', value: 'experience', selected: false},
+                { text: 'Home', ref: '#home', value: 'home', selected: true},
+                { text: 'About Me', ref: '#aboutme', value: 'aboutme', selected: false},
+                { text: 'Projects', ref: '#projects', value: 'projects', selected: false},
+                { text: 'Experience', ref: '#experience', value: 'experience', selected: false},
             ]
         };
-
-        Events.scrollEvent.register('begin', (to, element) => {
-            this.updateStateWhenScroll(to);
-        })
-        document.addEventListener('scroll', this.trackScrolling);
     }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.activeRef !== this.props.activeRef) {
+            this.state.items.forEach(item => item.selected = item.value === this.props.activeRef);
+        }
+    }
+
 
     isReached(el) {
         return el.getBoundingClientRect().top <= window.innerHeight / 2;
-    }
-
-    trackScrolling = () => {
-        const homeComp = document.getElementById('home');
-        const aboutMeComp = document.getElementById('aboutme');
-        const projectsComp = document.getElementById('projects');
-        const educationComp = document.getElementById('experience');
-        if (this.isReached(homeComp)) {
-            this.updateStateWhenScroll('home');
-        }
-        if (this.isReached(aboutMeComp)) {
-            this.updateStateWhenScroll('aboutme');
-        }
-        if (this.isReached(projectsComp)) {
-            this.updateStateWhenScroll('projects');
-        }
-        if (this.isReached(educationComp)) {
-            this.updateStateWhenScroll('experience');
-        }
-    };
-
-
-    scrollTo(value) {
-        scroller.scrollTo(value, {
-            duration: 300,
-            smooth: true
-        });
-        this.updateStateWhenScroll(value);
-    }
-
-    updateStateWhenScroll(value) {
-        let items = this.state.items;
-        items.forEach((item, i) => {
-            item.selected = item.value === value;
-        });
-        this.setState({items: items});
     }
 
     render() {
@@ -77,9 +43,8 @@ export class Header extends React.Component {
                     <ul id="navigation">
                         {this.state.items.map(item => (
                             <li key={item.text}
-                                onClick={() => this.scrollTo(item.value)}
                                 className={item.selected ? "selected" : "unselected"}>
-                                {item.text}
+                                <a href={item.ref}>{item.text}</a>
                             </li>
                         ))}
                     </ul>

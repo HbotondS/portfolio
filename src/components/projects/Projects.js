@@ -48,7 +48,7 @@ export class Projects extends React.Component {
 
     render() {
         return (
-            <div id={'projects'} className={'ProjectsPage'}>
+            <div id={'projects'} className={'ProjectsPage'} ref={this.props.reference}>
                 <span className={'title'}>Projects</span>
                 <div className={'project-container'}>
                     {this.projects.map((project, index) => (
