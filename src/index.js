@@ -34,7 +34,7 @@ class App extends React.Component {
         this.observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        this.state.activeRef = entry.target.id;
+                        this.setState({ activeRef: entry.target.id })
                     }
                 });
             },
