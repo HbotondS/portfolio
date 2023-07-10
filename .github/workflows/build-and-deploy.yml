@@ -47,8 +47,8 @@ jobs:
       id-token: write
 
     environment:
-      name: github-pages
-      url: hbotonds.github.io/portfolio/
+      name: gh-pages
+      url: https://hbotonds.github.io/portfolio/
 
     runs-on: ubuntu-latest
     steps:
