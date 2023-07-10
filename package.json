@@ -1,7 +1,7 @@
 {
   "homepage": "http://HbotondS.github.io/portfolio",
   "name": "portfolio",
-  "version": "0.2.0",
+  "version": "0.2.0-test",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",

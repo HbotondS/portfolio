@@ -18,10 +18,33 @@ class App extends React.Component {
         super(props);
         this.state = {
             shouldShow: false,
-            theme: 'dark'
+            theme: 'dark',
+            activeRef: ''
         };
         this.trackScrolling = this.trackScrolling.bind(this);
         document.addEventListener('scroll', this.trackScrolling);
+
+        this.homeRef = React.createRef();
+        this.aboutMeRef = React.createRef();
+        this.projectsRef = React.createRef();
+        this.experienceRef = React.createRef();
+    }
+
+    componentDidMount() {
+        this.observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.state.activeRef = entry.target.id;
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        this.observer.observe(this.homeRef.current);
+        this.observer.observe(this.aboutMeRef.current);
+        this.observer.observe(this.projectsRef.current);
+        this.observer.observe(this.experienceRef.current);
     }
 
     trackScrolling() {
@@ -43,11 +66,11 @@ class App extends React.Component {
             <ThemeProvider theme={ this.state.theme === 'light' ? lightTheme : darkTheme}>
                 <GlobalStyles />
                 <StyledApp>
-                    <Header theme={this.state.theme} switchTheme={switchTheme}/>
-                    <Home/>
-                    <AboutMe/>
-                    <Projects/>
-                    <Experience/>
+                    <Header theme={this.state.theme} switchTheme={switchTheme} activeRef={this.state.activeRef}/>
+                    <Home reference={this.homeRef}/>
+                    <AboutMe reference={this.aboutMeRef}/>
+                    <Projects reference={this.projectsRef}/>
+                    <Experience reference={this.experienceRef}/>
                     <Footer/>
                     <div>
                         {shouldShow && <GoUp/>}
@@ -59,6 +82,7 @@ class App extends React.Component {
 
     componentWillUnmount() {
         document.removeEventListener('scroll', this.trackScrolling);
+        this.observer.disconnect();
     }
 }
 
