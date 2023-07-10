@@ -10,7 +10,7 @@ export class Footer extends React.Component {
                 Currently <a className={'versionNr'}
                              href={'https://github.com/HbotondS/portfolio/releases/tag/v0.1'}
                              target={"_blank"}
-                             rel={'noopener noreferrer'}>v0.2</a>.
+                             rel={'noopener noreferrer'}>v0.2-test</a>.
                 Built with <FavoriteIcon className={'icon'}/> Copyright © 2022 Botond Hegyi
               </span>
             </div>
