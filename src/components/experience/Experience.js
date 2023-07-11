@@ -71,8 +71,8 @@ export class Experience extends React.Component {
     render() {
         return (
             <div id={'experience'} className={'ExperiencePage'} ref={this.props.reference}>
-              <ReadingSvg className={'reading-svg'}/>
-              <WorkSvg className={'work-svg'}/>
+              <ReadingSvg className={'reading-svg hidden'}/>
+              <WorkSvg className={'work-svg hidden'}/>
               <div className={'experience-container'}>
                 <div className={'title-container'}>
                   <h2 className={'title left'}>Education</h2>
