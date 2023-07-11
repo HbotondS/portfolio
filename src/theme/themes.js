@@ -41,42 +41,6 @@ export const GlobalStyles = createGlobalStyle`
         background: ${(props => props.theme.header)};
     }
     
-    .AboutMePage {
-        background: ${(props => props.theme.bg_light)};
-        
-        .container {
-            .title {
-                color: ${(props => props.theme.title)};
-            }
-            
-            .text {
-                color: ${(props => props.theme.text)};
-            }
-            
-            .button {
-                border-color: ${(props => props.theme.text)};
-                
-                .button-text, .download-icon {
-                    color: ${(props => props.theme.text)};
-                }
-            }
-        }
-    }
-    
-    .HomePage {
-       background: ${(props => props.theme.bg)};
-       
-       .container {
-          color: ${(props => props.theme.title)};
-       }
-       
-       .links {
-          .githubicon, .emailicon, .linkedinicon {
-             color: ${(props => props.theme.title)};
-          }
-       }
-    }
-    
     .ProjectsPage {
         background: ${(props => props.theme.bg)};
         

@@ -55,7 +55,7 @@ export class Projects extends React.Component {
                         <ProjectCard key={index} project={project} />
                     ))}
                 </div>
-                <ManPresenting className={'presenting-svg'}/>
+                <ManPresenting className={'presenting-svg hidden'}/>
             </div>
         );
     }
