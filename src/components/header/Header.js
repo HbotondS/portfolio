@@ -49,7 +49,7 @@ export class Header extends React.Component {
                         ))}
                     </ul>
                 </nav>
-                {themeSwitcher}
+                {/* {themeSwitcher} */}
             </div>
         );
     }
