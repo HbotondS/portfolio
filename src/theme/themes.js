@@ -5,11 +5,9 @@ export const lightTheme = {
     bg_light: '#f8f8f8',
     header: '#333333',
     primary: '#772ce8',
-    badge_bg: '#6B6B6B',
     card_bg: '#EFEEFF',
     title: '#333333',
     text: '#333333',
-    badge_text: 'white',
     experience_title: '#4E44DC',
     experience_link: '#333333',
     experience_date: '#4E44DC',
@@ -21,11 +19,9 @@ export const darkTheme = {
     bg_light: '#161515',
     header: '#333333',
     primary: '#772CE8',
-    badge_bg: '#6B6B6B',
     card_bg: '#333333',
     title: 'white',
     text: 'white',
-    badge_text: 'white',
     experience_title: 'white',
     experience_link: '#4E44DC',
     experience_date: 'white',
@@ -39,34 +35,6 @@ export const GlobalStyles = createGlobalStyle`
     
     #container {
         background: ${(props => props.theme.header)};
-    }
-    
-    .ProjectsPage {
-        background: ${(props => props.theme.bg)};
-        
-        .title {
-            color: ${(props => props.theme.title)};
-        }
-    }
-    
-    .ProjectCard {
-        .image-background {
-            background: ${(props => props.theme.primary)};
-        }
-        
-        .project-title {
-            color: ${(props => props.theme.title)};
-        }
-        
-        .badges {
-            .badge {
-                background: ${(props => props.theme.badge_bg)};
-                
-                .badge-text {
-                    color: ${(props => props.theme.badge_text)};
-                }
-            }
-        }
     }
     
     .ExperiencePage {
