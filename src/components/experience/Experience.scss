@@ -1,48 +1,14 @@
-.ExperiencePage {
-  height: 100vh;
+.reading-svg {
+  position: relative;
+  top: 30%;
+  height: 60vh;
+  width: 60vh;
+}
 
-  .reading-svg {
-    position: relative;
-    top: 30%;
-    height: 60vh;
-    width: 60vh;
-  }
-
-  .work-svg {
-    position: relative;
-    top: 40%;
-    left: 30%;
-    height: 60vh;
-    width: 60vh;
-  }
-
-  .experience-container {
-    position: absolute;
-    top: 310vh;
-    left: 25vw;
-    width: 50vw;
-    height: 80vh;
-
-    .title-container {
-      height: 10vh;
-
-      .title {
-        position: absolute;
-        font-size: 2.5vh;
-
-        &.left {
-          left: 15%;
-        }
-
-        &.right {
-          right: 18%;
-        }
-      }
-    }
-
-    .card-container {
-      height: 12vh;
-      padding-bottom: 3vh;
-    }
-  }
+.work-svg {
+  position: relative;
+  top: 40%;
+  left: 30%;
+  height: 60vh;
+  width: 60vh;
 }
