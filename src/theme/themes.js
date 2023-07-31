@@ -18,11 +18,7 @@ export const darkTheme = {
     text: 'white',
 }
 
-export const GlobalStyles = createGlobalStyle`
-    body {
-        background: ${(props => props.theme.bg)};
-    }
-    
+export const GlobalStyles = createGlobalStyle`    
     #container {
         background: ${(props => props.theme.header)};
     }
@@ -33,14 +29,5 @@ export const GlobalStyles = createGlobalStyle`
     
     .GoUp {
         color: ${(props => props.theme.text)};
-    }
-    
-    .Footer {
-        background: ${(props => props.theme.bg)};
-        color: ${(props => props.theme.text)};
-        
-        .footerTxt > .versionNr {
-            color: ${(props => props.theme.text)};
-        }
     }
 `;
