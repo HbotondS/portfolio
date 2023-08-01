@@ -71,7 +71,7 @@ export function Experience(props) {
       <h1 className='mt-14 ml-16 text-white text-4xl font-semibold'>Experience</h1>
       <ol className='w-full flex flex-col-reverse items-center'>
         {experiences.map((experience) => (
-          <li className="border-l-2 border-[#772CE8] cursor-default">
+          <li key={experience.title} className="border-l-2 border-[#772CE8] cursor-default">
             <ExperienceCard experience={experience} />
           </li>
         ))}

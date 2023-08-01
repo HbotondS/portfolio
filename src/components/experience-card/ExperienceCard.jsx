@@ -20,7 +20,7 @@ function ExperienceIcon({ type }) {
 export function ExperienceCard(props) {
   return (
     <div className='flex mb-10'>
-      <div class="bg-[#772CE8] w-6 h-6 flex items-center justify-center rounded-full -ml-[0.8rem] place-self-center">
+      <div className="bg-[#772CE8] w-6 h-6 flex items-center justify-center rounded-full -ml-[0.8rem] place-self-center">
         <ExperienceIcon type={props.experience.status} />
       </div>
       <div className='flex flex-col ml-6 bg-[#333333] w-80 h-24 rounded-2xl'>
