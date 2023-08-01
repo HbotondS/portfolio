@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styled, { ThemeProvider } from 'styled-components';
 import './index.scss';
 import { Header } from "./components/header/Header";
 import { Home } from "./components/home/Home";
@@ -9,9 +8,6 @@ import { Projects } from "./components/projects/Projects";
 import { Experience } from "./components/experience/Experience";
 import { GoUp } from "./components/go-up/GoUp";
 import { Footer } from "./components/footer/Footer";
-import { lightTheme, darkTheme, GlobalStyles } from "./theme/themes";
-
-const StyledApp = styled.div``;
 
 class App extends React.Component {
     constructor(props) {
@@ -63,20 +59,17 @@ class App extends React.Component {
 
         const {shouldShow} = this.state;
         return (
-            <ThemeProvider theme={ this.state.theme === 'light' ? lightTheme : darkTheme}>
-                <GlobalStyles />
-                <StyledApp>
-                    <Header theme={this.state.theme} switchTheme={switchTheme} activeRef={this.state.activeRef}/>
-                    <Home reference={this.homeRef}/>
-                    <AboutMe reference={this.aboutMeRef}/>
-                    <Projects reference={this.projectsRef}/>
-                    <Experience reference={this.experienceRef}/>
-                    <Footer/>
-                    <div>
-                        {shouldShow && <GoUp/>}
-                    </div>
-                </StyledApp>
-            </ThemeProvider>
+            <>
+                <Header theme={this.state.theme} switchTheme={switchTheme} activeRef={this.state.activeRef}/>
+                <Home reference={this.homeRef}/>
+                <AboutMe reference={this.aboutMeRef}/>
+                <Projects reference={this.projectsRef}/>
+                <Experience reference={this.experienceRef}/>
+                <Footer/>
+                <div>
+                    {shouldShow && <GoUp/>}
+                </div>
+            </>
         );
     }
 
