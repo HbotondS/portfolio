@@ -1,7 +1,7 @@
-import cv from '../../assets/docs/Botond Hegyi CV.pdf';
+import cv from '../assets/docs/Botond Hegyi CV.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
-import { ReactComponent as ManSvg } from '../../assets/animations/thinking_man.svg';
-import { useElementOnScreen } from '../../utils/useElementOnScreen';
+import { ReactComponent as ManSvg } from '../assets/animations/thinking_man.svg';
+import { useElementOnScreen } from '../utils/useElementOnScreen';
 import { useEffect } from 'react';
 
 export function AboutMe({ onVisible }) {

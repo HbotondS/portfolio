@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import { Header } from "./components/header/Header";
-import { Home } from "./components/home/Home";
-import { AboutMe } from "./components/about-me/AboutMe";
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+import { AboutMe } from "./components/AboutMe";
 import { Projects } from "./components/projects/Projects";
 import { Experience } from "./components/experience/Experience";
 import { GoUp } from "./components/go-up/GoUp";
-import { Footer } from "./components/footer/Footer";
+import { Footer } from "./components/Footer";
 
 function App(props) {
     const [ shouldShow, setShouldShow ] = useState(false);

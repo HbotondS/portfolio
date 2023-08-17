@@ -2,7 +2,7 @@ import './Experience.scss';
 import * as React from 'react';
 import { ReactComponent as ReadingSvg } from '../../assets/animations/reading.svg';
 import { ReactComponent as WorkSvg } from '../../assets/animations/work.svg';
-import { ExperienceCard } from '../experience-card/ExperienceCard';
+import { ExperienceCard } from './sub-components/ExperienceCard';
 import { ExperienceData } from '../../models/experience-data';
 import { useElementOnScreen } from '../../utils/useElementOnScreen';
 import { useEffect } from 'react';
