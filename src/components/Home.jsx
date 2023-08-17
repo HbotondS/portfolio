@@ -15,7 +15,7 @@ export function Home({ onVisible }) {
   }, [ isVisible, onVisible ]);
 
   return (
-    <div id={'home'} className="h-screen bg-neutral-900 flex flex-col items-center justify-center" ref={ containerRef }>
+    <div id={'home'} className="h-screen bg-[#161515] flex flex-col items-center justify-center" ref={ containerRef }>
       <div className='flex flex-col items-center'>
         <span className='text-white text-4xl'>Hello I am Botond</span>
         <span className='text-white text-base mt-2'>Full Stack Dev | Hobby Game Dev | Gamer</span>

@@ -76,7 +76,7 @@ export function Experience({ onVisible }) {
   ];
 
   return (
-    <div id='experience' className='h-fit flex flex-col bg-stone-900' ref={ containerRef }>
+    <div id='experience' className='h-fit flex flex-col bg-[#121212]' ref={ containerRef }>
       <ReadingSvg className="reading-svg hidden" />
       <WorkSvg className="work-svg hidden" />
       <h1 className='mt-14 ml-16 text-white text-4xl font-semibold'>Experience</h1>
