@@ -1,10 +1,20 @@
 import cv from '../../assets/docs/Botond Hegyi CV.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
 import { ReactComponent as ManSvg } from '../../assets/animations/thinking_man.svg';
+import { useElementOnScreen } from '../../utils/useElementOnScreen';
+import { useEffect } from 'react';
 
-export function AboutMe(props) {
+export function AboutMe({ onVisible }) {
+  const [ containerRef, isVisible ] = useElementOnScreen();
+
+  useEffect(() => {
+    if (isVisible) {
+      onVisible();
+    }
+  }, [ isVisible, onVisible ]);
+
   return (
-    <div id='aboutme' className='h-screen flex items-center justify-center bg-stone-900' ref={props.reference}>
+    <div id='aboutme' className='h-screen flex items-center justify-center bg-stone-900' ref={ containerRef }>
       <div className='flex flex-col md:w-7/12'>
         <span className='text-center md:text-right font-bold text-6xl text-white'>About Me</span>
 

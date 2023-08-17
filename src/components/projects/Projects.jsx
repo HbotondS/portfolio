@@ -5,8 +5,18 @@ import snake from '../../assets/images/snake.jpg';
 import minesweeper from '../../assets/images/minesweeper.jpg';
 import no_image from '../../assets/images/no_image.jpg';
 import { ReactComponent as ManPresenting } from '../../assets/animations/projects.svg';
+import { useElementOnScreen } from '../../utils/useElementOnScreen';
+import { useEffect } from 'react';
 
-export function Projects(props) {
+export function Projects({ onVisible }) {
+  const [ containerRef, isVisible ] = useElementOnScreen();
+
+  useEffect(() => {
+    if (isVisible) {
+      onVisible();
+    }
+  }, [ isVisible, onVisible ]);
+
   const projects = [
     new ProjectData(
       'Space Invaders clone',
@@ -44,7 +54,7 @@ export function Projects(props) {
   ];
 
   return (
-    <div id={'projects'} className="h-fit md:h-screen flex items-center bg-neutral-900" ref={props.reference}>
+    <div id={'projects'} className="h-fit md:h-screen flex items-center bg-neutral-900" ref={ containerRef }>
       <div className="flex flex-col ml-16">
         <span className="text-white text-4xl font-semibold mb-8">Projects</span>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10'>

@@ -2,10 +2,20 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { ClickMe } from '../clickme/ClickMe';
+import { useElementOnScreen } from '../../utils/useElementOnScreen';
+import { useEffect } from 'react';
 
-export function Home(props) {
+export function Home({ onVisible }) {
+  const [ containerRef, isVisible ] = useElementOnScreen();
+
+  useEffect(() => {
+    if (isVisible) {
+      onVisible();
+    }
+  }, [ isVisible, onVisible ]);
+
   return (
-    <div id={'home'} className="h-screen bg-neutral-900 flex flex-col items-center justify-center" ref={props.reference}>
+    <div id={'home'} className="h-screen bg-neutral-900 flex flex-col items-center justify-center" ref={ containerRef }>
       <div className='flex flex-col items-center'>
         <span className='text-white text-4xl'>Hello I am Botond</span>
         <span className='text-white text-base mt-2'>Full Stack Dev | Hobby Game Dev | Gamer</span>
