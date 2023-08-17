@@ -1,5 +1,5 @@
 import { ProjectData } from '../../models/project-data';
-import { ProjectCard } from '../project-card/ProjectCard';
+import { ProjectCard } from './sub-components/ProjectCard';
 import space_invaders from '../../assets/images/space_invaders.jpg';
 import snake from '../../assets/images/snake.jpg';
 import minesweeper from '../../assets/images/minesweeper.jpg';
