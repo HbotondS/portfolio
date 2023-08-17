@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useEffect, useState } from 'react';
 
 export function Header({ theme, switchTheme, activeRef }) {
-    const [ items ] = useState([
+    const [ items, setItems ] = useState([
       { text: 'Home', ref: '#home', value: 'home', selected: true},
       { text: 'About Me', ref: '#aboutme', value: 'aboutme', selected: false},
       { text: 'Projects', ref: '#projects', value: 'projects', selected: false},
       { text: 'Experience', ref: '#experience', value: 'experience', selected: false},
     ]);
+    const ref = useRef(activeRef);
 
     useEffect(() => {
-        items.forEach(item => item.selected = item.value === activeRef);
+      if (ref.current !== activeRef) {
+        const newItems = items.map(item => {
+          item.selected = item.value === activeRef;
+          return { ...item, selected: item.value === activeRef };
+        });
+        setItems(newItems);
+        ref.current = activeRef;
+      }
     }, [ activeRef, items ]);
  
     let themeSwitcher;

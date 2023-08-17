@@ -4,8 +4,19 @@ import { ReactComponent as ReadingSvg } from '../../assets/animations/reading.sv
 import { ReactComponent as WorkSvg } from '../../assets/animations/work.svg';
 import { ExperienceCard } from '../experience-card/ExperienceCard';
 import { ExperienceData } from '../../models/experience-data';
+import { useElementOnScreen } from '../../utils/useElementOnScreen';
+import { useEffect } from 'react';
 
-export function Experience(props) {
+export function Experience({ onVisible }) {
+  const [ containerRef, isVisible ] = useElementOnScreen();
+
+  useEffect(() => {
+    if (isVisible) {
+      onVisible();
+    }
+  }, [ isVisible, onVisible ]);
+
+  
   const experiences = [
     new ExperienceData(
       'Computer Science',
@@ -65,7 +76,7 @@ export function Experience(props) {
   ];
 
   return (
-    <div id='experience' className='h-fit flex flex-col bg-stone-900' ref={props.reference}>
+    <div id='experience' className='h-fit flex flex-col bg-stone-900' ref={ containerRef }>
       <ReadingSvg className="reading-svg hidden" />
       <WorkSvg className="work-svg hidden" />
       <h1 className='mt-14 ml-16 text-white text-4xl font-semibold'>Experience</h1>
