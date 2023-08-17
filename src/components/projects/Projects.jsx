@@ -54,7 +54,7 @@ export function Projects({ onVisible }) {
   ];
 
   return (
-    <div id={'projects'} className="h-fit md:h-screen flex items-center bg-neutral-900" ref={ containerRef }>
+    <div id={'projects'} className="h-fit md:h-screen flex items-center bg-[#161515]" ref={ containerRef }>
       <div className="flex flex-col ml-16">
         <span className="text-white text-4xl font-semibold mb-8">Projects</span>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10'>

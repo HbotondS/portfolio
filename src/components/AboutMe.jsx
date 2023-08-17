@@ -14,7 +14,7 @@ export function AboutMe({ onVisible }) {
   }, [ isVisible, onVisible ]);
 
   return (
-    <div id='aboutme' className='h-screen flex items-center justify-center bg-stone-900' ref={ containerRef }>
+    <div id='aboutme' className='h-screen flex items-center justify-center bg-[#121212]' ref={ containerRef }>
       <div className='flex flex-col md:w-7/12'>
         <span className='text-center md:text-right font-bold text-6xl text-white'>About Me</span>
 
