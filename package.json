@@ -4,17 +4,15 @@
   "version": "0.2.0-test",
   "private": true,
   "dependencies": {
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.8.5",
-    "@mui/styles": "^5.8.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/styled-engine": "^5.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "react-scroll": "^1.8.7",
-    "sass": "^1.56.1"
+    "react-scroll": "^1.8.9",
+    "sass": "^1.66.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,6 +39,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.3"
   }
 }
