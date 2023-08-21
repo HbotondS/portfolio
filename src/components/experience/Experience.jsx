@@ -76,11 +76,11 @@ export function Experience({ onVisible }) {
   ];
 
   return (
-    <div id='experience' className='h-fit md:h-screen flex flex-col bg-[#121212]' ref={ containerRef }>
-      <ReadingSvg className="reading-svg hidden" />
-      <WorkSvg className="work-svg hidden" />
+    <div id='experience' className='h-fit flex flex-col bg-[#121212]' ref={ containerRef }>
+      <ReadingSvg className='absolute md:-left-48 lg:left-14 mt-72 w-fit hidden xl:block h-[30rem]' />
+      <WorkSvg className='absolute md:-right-48 lg:right-5 mt-52 w-fit hidden xl:block xl:h-[15rem] 2xl:h-[20rem]' />
       <h1 className='mt-14 ml-16 mb-8 text-white text-4xl font-semibold'>Experience</h1>
-      <ol className='w-full flex flex-col-reverse items-center'>
+      <ol className='w-full flex flex-col-reverse items-center z-10'>
         {experiences.map((experience) => (
           <li key={experience.title} className="border-l-2 border-[#772CE8] cursor-default">
             <ExperienceCard experience={experience} />
