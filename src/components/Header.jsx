@@ -23,13 +23,6 @@ export function Header({ theme, switchTheme, activeRef }) {
       }
     }, [ activeRef, items ]);
  
-    let themeSwitcher;
-    if (theme === 'light') {
-        themeSwitcher = <DarkModeIcon className={'themeicon'} onClick={switchTheme}/>;
-    } else {
-        themeSwitcher = <LightModeIcon className={'themeicon'} onClick={switchTheme}/>;
-    }
-
     return (
       <div className='flex w-full h-10 bg-[#333333] fixed top-0 z-50'>
         <nav className='flex ml-8'>
@@ -42,7 +35,6 @@ export function Header({ theme, switchTheme, activeRef }) {
             ))}
           </ul>
         </nav>
-        {/* {themeSwitcher} */}
       </div>
     );
 }
