@@ -1,6 +1,4 @@
 import React, { useRef } from 'react';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useEffect, useState } from 'react';
 
 export function Header({ theme, switchTheme, activeRef }) {

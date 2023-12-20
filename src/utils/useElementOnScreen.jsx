@@ -4,7 +4,6 @@ export function useElementOnScreen() {
 
     const containerRef = useRef(null);
     const [ isVisible, setIsVisible ] = useState(false);
-    const current = containerRef.current;
 
     const callbackFn = (entires) => {
       const [ entry ] = entires;
@@ -13,6 +12,7 @@ export function useElementOnScreen() {
 
     useEffect(() => {
       const options = { threshold: 0.5 };
+      const current = containerRef.current;
 
       const observer = new IntersectionObserver(callbackFn, options);
       if (current) {
